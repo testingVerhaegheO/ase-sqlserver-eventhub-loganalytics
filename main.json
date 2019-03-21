@@ -22,6 +22,22 @@
         },
         {
             "apiVersion": "2017-05-10",
+            "name": "loganalytics",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "https://raw.githubusercontent.com/testingVerhaegheO/ase-sqlserver-eventhub-loganalytics/master/logAnalytics.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "https://raw.githubusercontent.com/testingVerhaegheO/ase-sqlserver-eventhub-loganalytics/master/logAnalytics.parameters.json",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2017-05-10",
             "name": "webapp",
             "type": "Microsoft.Resources/deployments",
             "dependsOn": [
