@@ -15,7 +15,7 @@
             "Standalone",
             "PerNode",
            "PerGB2018",
-           "Free "
+           "Free"
           ],
            "metadata": {
           "description": "Specifies the service tier of the workspace: Standalone, PerNode, Per-GB"
