@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {   
+    "siteName": {
+      "value": "testingwebapp02"
+    },
+    "administratorLogin": {
+      "value": "olivieradmin"
+    },
+    "administratorLoginPassword": {
+      "value": "Testing123!"
+    },
+    "namespaceName": {
+      "value": "testingVerhaegheO02Eventhub"
+    },
+    "eventhubAuthorizationRuleName": {
+      "value": "testingVerhaegheO02eventhub0AuthorizationRuleName"
+    },
+    "eventHubName": {
+      "value": "testingVerhaegheO02EventhubName"
+    },
+    "namespaceAuthorizationRuleName": {
+      "value": "testingVerhaegheO02namespaceAuthorizationRuleName"
+    }
+  }
+}
