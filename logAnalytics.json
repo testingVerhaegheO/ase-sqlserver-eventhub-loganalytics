@@ -14,7 +14,7 @@
        "allowedValues": [
             "Standalone",
             "PerNode",
-           "PerGB2018",
+           "PerGB201",
            "Free"
           ],
            "metadata": {
