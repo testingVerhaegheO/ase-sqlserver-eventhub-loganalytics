@@ -3,14 +3,14 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "workspaceName": {
-          "type": "String",
-       "metadata": {
+        "type": "String",
+        "metadata": {
             "description": "Specifies the name of the workspace."
           }
       },
       "sku": {
-          "type": "String",
-          "defaultValue": "Free",
+        "type": "String",
+        "defaultValue": "Free",
        "allowedValues": [
             "Standalone",
             "PerNode",

@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "value": "adminolivier"
+          },
+          "adminPassword": {
+            "value": "AdminOlivier123!"
+          },
+          "dnsLabelPrefix": {
+             "value": "mijnschool"
+          },
+          "workspaceName": {
+            "value": "testingVerhaegheO06"
+          },
+          "virtualNetworkName": {
+            "value": "testingVerhaegheO02"
+          },
+          "virtualNetworkID":{
+            "value": "/subscriptions/a6e10cb0-79e5-4b68-af13-d17fc5f7505a/resourceGroups/testingVerhaegheO02/providers/Microsoft.Network/virtualNetworks/testingVerhaegheO02"
+          }
+    }
+}
