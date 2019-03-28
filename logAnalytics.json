@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "$schema": "https://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
@@ -66,73 +65,4 @@
           }
       }
      ]
-=======
-{
-  "$schema": "https://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-      "workspaceName": {
-        "type": "String",
-        "metadata": {
-            "description": "Specifies the name of the workspace."
-          }
-      },
-      "sku": {
-        "type": "String",
-        "defaultValue": "Free",
-       "allowedValues": [
-            "Standalone",
-            "PerNode",
-           "PerGB201",
-           "Free"
-          ],
-           "metadata": {
-          "description": "Specifies the service tier of the workspace: Standalone, PerNode, Per-GB"
-     }
-        }
-  },
-  "variables": {
-      "ApplicationInsights": {
-          "Name": "[Concat('ApplicationInsights', '(', parameters('workspaceName'), ')')]",
-          "GalleryName": "ApplicationInsights"
-      }
-  },
-  "resources": [
-      {
-          "type": "Microsoft.OperationalInsights/workspaces",
-          "name": "[parameters('workspaceName')]",
-          "apiVersion": "2015-11-01-preview",
-          "location": "[resourceGroup().location]",
-          "properties": {
-              "sku": {
-                  "Name": "[parameters('sku')]"
-              },
-              "features": {
-                  "searchVersion": 1
-              }
-          }
-        },
-        {
-          "apiVersion": "2015-11-01-preview",
-          "location": "[resourceGroup().location]",
-          "tags": {
-          },
-          "name": "[variables('ApplicationInsights').Name]",
-          "type": "Microsoft.OperationsManagement/solutions",
-          "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.OperationsManagement/solutions/', variables('ApplicationInsights').Name)]",
-          "dependsOn": [
-            "[concat('Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]"
-          ],
-          "properties": {
-            "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]"
-          },
-          "plan": {
-            "name": "[variables('ApplicationInsights').Name]",
-            "publisher": "Microsoft",
-            "product": "[Concat('OMSGallery/', variables('ApplicationInsights').GalleryName)]",
-            "promotionCode": ""
-          }
-      }
-     ]
->>>>>>> a1177c2f27114143e3ae46e349c890e250f16efd
   }
