@@ -152,7 +152,16 @@
                 "ASPNETCORE_ENVIRONMENT": "[parameters('environment')]",
                 "Logging:ApplicationInsights:InstrumentationKey": "[reference(resourceId('Microsoft.Insights/components', parameters('aiName')), '2014-04-01').InstrumentationKey]"
               }
-          }
+          },
+            {
+					"apiVersion": "2015-08-01",
+					"name": "Microsoft.ApplicationInsights.AzureWebSites",
+					"type": "siteextensions",
+					"dependsOn": [
+						"[resourceId('Microsoft.Web/Sites', variables('webSiteName'))]"
+					],
+					"properties": {}
+            }
         ],
         "tags": {
           "description": "connect"
